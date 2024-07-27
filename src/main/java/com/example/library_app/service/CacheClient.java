@@ -10,7 +10,7 @@ public interface CacheClient {
     void shutdown();
 
     class Builder{
-
+        private String type;
         private String host;
         private String port;
         private boolean failOnError=true;
@@ -22,6 +22,11 @@ public interface CacheClient {
             return this;
         }
 
+        public Builder type(String type)
+        {
+            this.type=type;
+            return this;
+        }
         public Builder port(String port)
         {
             this.port=port;
