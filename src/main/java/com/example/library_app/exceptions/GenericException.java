@@ -1,7 +1,7 @@
 package com.example.library_app.exceptions;
 
 import com.example.library_app.dto.ErrorCode;
-import jakarta.persistence.Entity;
+
 import lombok.*;
 import org.springframework.http.HttpStatus;
 
@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 @NoArgsConstructor
 @Data
 @Getter
+@EqualsAndHashCode(callSuper = true)
 public class GenericException extends RuntimeException{
     private HttpStatus httpStatus;
     private ErrorCode errorCode;
